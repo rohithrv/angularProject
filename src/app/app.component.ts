@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angularApp';
+
+  private title : any;
+  private currentImage : any;
+
+  constructor(){
+    this.title = 'goFind';
+    this.currentImage = "testImage2.jpg";
+  }
+  
+  
+  catalog = ["testImage2.jpg","jeanjacket.jpeg","dressshirt.jpeg","gucci.jpg","shoes.jpg"];
+  
+  public changeCurrentImage(clickedImage){
+
+    this.currentImage = clickedImage;
+  }
 }
